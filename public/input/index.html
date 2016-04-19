@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<meta charset="utf-8">
+	<title>jquery</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fancyInput.css">
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="jquery.min.js"></script>
+	<!--<script src="jquery.min.js"></script>-->
+</head>
+<body>
+			<section class='input'>
+				<div>
+					<input type='text' placeholder="type something..." >
+				</div>
+			</section>
+	<script src='fancyInput.js'></script>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+
+		// Everything below is only for the DEMO
+		function init(str){
+			var input = $('section input').val('')[0],
+				s = 'type something... '.split('').reverse(),
+				len = s.length-1,
+				e = $.Event('keypress');
+			
+			var	initInterval = setInterval(function(){
+					if( s.length ){
+						var c = s.pop();
+						fancyInput.writer(c, input, len-s.length).setCaret(input);
+						input.value += c;
+						//e.charCode = c.charCodeAt(0);
+						//input.trigger(e);
+						
+					}
+					else clearInterval(initInterval);
+			},150);
+		}
+		
+		init();
+	</script>
+</body> 
+</html>

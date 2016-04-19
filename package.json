@@ -1,0 +1,15 @@
+{
+  "name": "mn",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node basicServer.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "ejs": "*",
+    "body-parser":"*",
+    "cookie-parser":"*",
+    "cookie-session":"*"
+}
+  }

@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>Licode ChatRoom</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./heart/css/style.css">
+        <!--[if lt IE 8]><script src="./js/json3.min.js"></script><![endif]-->
+      
+         
+    <script type="text/javascript" src="./erizo.js"></script>
+
+
+      
+  </head>
+
+  <body>
+    <div id="chatbox">
+<div id="ready_show" style="display:none;">
+  Everyone is Ready!
+</div>
+
+<div style="background:#6E7B8B;height: 28px; width: 100%;font-size:12px;">
+                <div style="line-height: 28px;color:#6E7B8B;">
+                    <span style="text-align:left;margin-left:10px;color:#FCF8DC;">Werewolf Room</span>
+                    <span style="float:right; margin-right:10px;color:#FCF8DC;"><span id="showusername"></span> | 
+          <a href="javascript:;" onclick="DEMO.logout()" style="color:#fff;">exit</a></span>
+                </div>
+            </div>
+
+
+<div id="testlocal">
+      <div id="topic">
+<img src="./images/brainstorm.png" id="brainstorm_image"/>
+<div id="topic_name">
+<h1>Who is the wolf?</h1></div>
+    </div>
+    <div id="instruction">
+    </div>
+          <div id="result">
+            <div id="input_result">
+            <input id="result_text" class="input" rows="2" name="content" placeholder="Input your answer">
+            <button type="button" onclick="DEMO.send_result();">ok</button>
+     </div>
+     <button type="button" id="time_start">ready</button>
+    <div id="demo"></div>
+
+
+        
+          </div>
+    <div id="local-video">
+      <div id="back_image1"></div>
+      <div id="back_image2"></div>
+      <div id="back_image3"></div>
+      <div id="back_image4"></div>
+
+
+             <div id="video_grid" class="span9">
+             </div>
+
+
+    </div>
+    </div>
+    <div id="right">
+    <div id="text-connectivity">
+      <p>System information</p>
+      <textarea id="messages" rows="15" cols="100"></textarea>
+    </div>
+                    <div id="doc">
+
+                <div id="chat_body_container" class="message">
+
+<div id="users_list" style="background: #FCF6CF; font-size:12px; color:#666;">
+  <h2>Online List</h2>
+
+</div>
+
+<div id="chat_body"></div>
+<div id="chat_message_container" >
+
+          </div>                       
+
+
+                </div>
+
+            </div>
+            <div id="submit">
+                  <input id="chat_message" class="input" rows="2" name="content" placeholder="Input your words and push Ctrl">
+ <div id="chat_message_action" class="action">
+      <button type="button" onclick="DEMO.send_chat_message();">submit</button>
+                        </div>
+                         </div>
+            </div>
+                   </div>
+ 
+ <script type="text/javascript">
+     function randArray(data){
+    //获取数组长度
+    var arrlen = data.length;
+    //创建数组 存放下标数
+    var try1 = new Array();
+    for(var i = 0;i < arrlen; i++){
+        try1[i] = i;
+    }
+    //创建数组 生成随机下标数
+    var try2 = new Array();
+    for(var i = 0;i < arrlen; i++){
+        try2[i] = try1.splice(Math.floor(Math.random() * try1.length),1);
+    }
+    //创建数组，生成对应随机下标数的数组
+    var try3 = new Array();
+    for(var i = 0; i < arrlen; i++){
+        try3[i] = data[try2[i]];
+    }
+    return try3;
+}
+window.onload = function () {
+var arr = ["a","b","c","d"];
+
+alert(randArray(arr));
+}
+
+ </script>
+    
+  </body>
+</html>

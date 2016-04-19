@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title>Licode ChatRoom</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./heart/css/style.css">
+        <!--[if lt IE 8]><script src="./js/json3.min.js"></script><![endif]-->
+      
+         
+    <script type="text/javascript" src="./erizo.js"></script>
+
+
+      
+  </head>
+
+  <body>
+<div id="ready_show" class="show" style="display:none;">
+  Ready!Please confirm your role.
+</div>
+<div id="daynight_show" class="show" style="display:none;">The Night</div>
+
+<div id="won_show" class="show" style="display:none;">
+</div>
+<div id="connection_panel">
+            <div style="width:300px;margin:200px auto;">
+                <h4>Please input your nickname:</h4>
+                <br/>
+                <br/>
+                <input type="text" style="width:180px;" placeholder="your name" id="username_txt" name="username" />
+                <button id="connect_button" type="button">Connect</button> 
+        
+            </div> 
+</div>
+<div id="chatbox" style="display:none;">
+    <div id="popup" style="display:none;">
+    <div id="close_popup"></div>
+<iframe src="https://docs.google.com/forms/d/1dgzbmg8X3k0FF1qXuRiJcXiF97tcsf4rI2848R_kTHM/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">loading...</iframe>
+
+</div>
+<div id="how" style="display:none;color:#EED8AE;padding:15px;">
+  <h5>Playing as a Werewolf</h5>
+  <h6>-Roles</h6>
+  
+  &nbsp;&nbsp;@Killer: The goal of the Killer is to decide together on one villager to secretly kill off during the night, while posing as villagers during the day so they're not killed off themselves. 
+  &nbsp;&nbsp;@Villager: The Villager spends the game trying to root out who they believe the Killers are.
+  <br><br><h6>-Timeline</h6>
+
+  &nbsp;&nbsp;Ready: When everybody is "Ready!", new game starts. Confirm your role under your local video.<br><br>
+  &nbsp;&nbsp;The Night: The villagers' screens will be covered. The killers silently agree on one villager to kill(sign language is appropriate, or just pointing, nodding, raising eyebrows, and so on). When the killers have agreed on a victim, they click on victim's "X" under the video. All players taking the role of werewolf must agree on a single target.<br><br>
+  &nbsp;&nbsp;The Day: For the day, go around and have everyone introduce themselves (Example: Hey, I'm Matt, and I'm a villager). All the living players gather in the village and decide who to lynch. As soon as a majority of players vote for a particular player to lynch. If the same number of votes is received, nobody will be lynched. Once a player is lynched, night falls and the cycle repeats.<br><br>
+  <h6>-Winning</h6>
+ 
+  &nbsp;&nbsp;The villagers win if they kill both werewolves, and vice versa.
+</div>
+<div style="background:#8B1A1A;height: 28px; width: 100%;font-size:12px;">
+                <div style="line-height: 28px;color:#8B1A1A;">
+                    <span style="text-align:left;margin-left:10px;color:#FCF8DC;font-weight:bold;">Werewolf Room</span>
+                    <span style="float:right; margin-right:10px;color:#FCF8DC;"><span id="showusername"></span> | 
+          <a href="javascript:;" onclick="DEMO.logout()" style="color:#fff;">exit</a></span>
+                </div>
+            </div>
+
+
+<div id="testlocal">
+  
+      <div id="topic">
+<img src="./images/latest.gif" id="brainstorm_image"/>
+<button id="open_popup" class="red_button">Take the Survey</button>
+<button id="open_how" class="red_button">How to Play</button>
+    </div>
+    <div id="instruction">
+    </div>
+          <div id="result">
+            
+     <button type="button" id="time_start" class="red_button" >Ready</button>
+     <button type="button" id="giveup_vote" class="red_button" style="display:none;">None</button>
+    <div id="demo"></div>
+
+    <div id="circle"></div>
+
+        
+          </div>
+   <div id="villager_night" style="display:none;">
+    <br><br>
+        <h5>--Night--</h5>
+        <h5>Your role: villager </h5>
+    </div>
+    <div id="local-video">
+
+      <div id="back_image1"></div>
+
+      <div id="back_image3"></div>
+
+
+
+             <div id="video_grid" class="span9">
+             </div>
+
+
+    </div>
+    </div>
+    <div id="right">
+    <div id="text-connectivity">
+      <h2>System information</h2>
+      <textarea id="messages" rows="15" cols="100"></textarea>
+    </div>
+                    <div id="doc">
+
+                <div id="chat_body_container" class="message">
+
+<div id="users_list" style="background: #EED8AE; font-size:12px; color:#666;">
+  <h2>Online List</h2>
+
+</div>
+
+<div id="chat_body"></div>
+<div id="chat_message_container" >
+
+          </div>                       
+
+
+                </div>
+
+            </div>
+            <div id="submit">
+                  <input id="chat_message" class="input" rows="2" name="content" placeholder="Input your words and push Ctrl">
+ <div id="chat_message_action" class="action">
+      <button type="button" onclick="DEMO.send_chat_message();">submit</button>
+                        </div>
+                         </div>
+            </div>
+  </div>
+ <script src="./heart/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./countdown/js/jquery.min.js"></script>
+         <script type="text/javascript" src="./countdown/js/jquery.pietimer.min.js"></script>
+              <script type="text/javascript" src="./js/demoTemplate.js"></script>
+                <script type="text/javascript" src="./connection_test.js"></script>
+     
+  </body>
+</html>

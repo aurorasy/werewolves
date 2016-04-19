@@ -1,0 +1,35 @@
+div#top-margin{
+	height:28px;
+	width:100%;
+	background-color:#6E7B8B;
+	position:fixed;
+}
+div#left{
+	height:901px;
+	width:260px;
+	margin-top:28px;
+	background-color:#9FB6CD;
+	position:fixed;
+	float:left;
+}
+div#right{
+	height:100%;
+	width:942px;
+	background-color:#FCF8DC;
+	float:left;
+	margin-left: 260px;
+	margin-top: 28px;
+}
+
+div#page_title{
+height:628px;
+width:942px;
+}
+#brainstorm_image{
+	width:942px;
+
+}
+#get-into-room{
+	margin-left: 410px;
+	margin-top: -480px;
+}
