@@ -104,8 +104,10 @@ app.use(function(req, res, next) {
 });
 
 
-
-app.listen(3001);
+app.set('port',(process.env.PORT || 3001));
+app.listen(app.get('port'),function(){
+    console.log('Node app is running on port',app.get('port'))
+});
 
 var server = https.createServer(options, app);
 server.listen(3004);
