@@ -1,5 +1,5 @@
 {
-  "name": "mn",
+  "name": "aurorasy",
   "version": "0.0.1",
   "private": false,
   "scripts": {
@@ -8,8 +8,27 @@
   "dependencies": {
     "express": "3.4.4",
     "ejs": "*",
-    "body-parser":"*",
-    "cookie-parser":"*",
-    "cookie-session":"*"
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "cookie-session": "*"
+  },
+  "description": "demo",
+  "main": "basicSever.js",
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aurorasy/werewolves.git"
+  },
+  "keywords": [
+    "werewolves"
+  ],
+  "author": "aurorasy",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/aurorasy/werewolves/issues"
+  },
+  "homepage": "https://github.com/aurorasy/werewolves#readme"
 }
-  }
