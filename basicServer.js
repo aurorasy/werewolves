@@ -9,10 +9,7 @@ var express = require('express'),
     https = require("https"),
         config = require('./licode_config');
 
-var spawn = require('child_process').spawn;
-var deploySh = spawn('sh', [ 'initLicode.sh' ], {
-  cwd: process.env.HOME + '/licode/script'
-});
+require('child_process').exec('sh ./licode/script/initLicode.sh');
 
 
 var options = {
