@@ -9,6 +9,12 @@ var express = require('express'),
     https = require("https"),
         config = require('./licode_config');
 
+var spawn = require('child_process').spawn;
+var deploySh = spawn('sh', [ 'initLicode.sh' ], {
+  cwd: process.env.HOME + '/licode/script'
+});
+
+
 var options = {
     key: fs.readFileSync('./cert/key.pem').toString(),
     cert: fs.readFileSync('./cert/cert.pem').toString()
