@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": false,
   "scripts": {
-    "start": "node basicServer.js"
+    "start": "./licode/scripts/initLicode.sh"
   },
   "dependencies": {
     "express": "3.4.4",

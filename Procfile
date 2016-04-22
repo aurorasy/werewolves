@@ -1,1 +1,1 @@
-web:node basicServer.js
+web:./licode/scripts/initLicode.sh
