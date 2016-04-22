@@ -1,34 +1,4 @@
 /*global require, __dirname, console*/
-/*var sys = require('sys');
-var execSync = require('child_process').execSync;
- */
-/*function puts(error, stdout, stderr) { sys.puts(stdout);
-console.log(error, stdout,stderr); }
-execSync("sh ./licode/scripts/initLicode.sh", puts);
-
-var myscript = execSync('sh ./licode/scripts/initLicode.sh');
-myscript.stdout.on('data',function(data){
-    console.log(data); // process output will be displayed here
-});
-myscript.stderr.on('data',function(data){
-    console.log(data); // process error output will be displayed here
-});*/
-/*
-var spawn = require('child_process').spawnSync,
-    ls    = spawn('sh', ['./licode/scripts/initLicode.sh']);
-
-ls.stdout.on('data', function (data) {
-  console.log('stdout: ' + data);
-});
-
-ls.stderr.on('data', function (data) {
-  console.log('stderr: ' + data);
-});
-
-ls.on('close', function (code) {
-  console.log('child process exited with code ' + code);
-});
-*/
 var express = require('express'),
     bodyParser = require('body-parser'),
     errorhandler = require('errorhandler'),
@@ -39,15 +9,13 @@ var express = require('express'),
     https = require("https"),
         config = require('./licode_config');
 
-//require('child_process').exec('sh ./licode/script/initLicode.sh');
-
-
 var options = {
     key: fs.readFileSync('./cert/key.pem').toString(),
     cert: fs.readFileSync('./cert/cert.pem').toString()
 };
 
 var app = express();
+
 
 // app.configure ya no existe
 "use strict";
